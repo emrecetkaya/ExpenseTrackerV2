@@ -25,9 +25,16 @@ const App = () => {
     },
   ];
 
+  const handleNewExpenseData = (newExpenseData) => {
+    const expenseData = {
+      ...newExpenseData
+    };
+    console.log(expenseData);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onNewExpenseData={handleNewExpenseData} />
       <Expenses expenses={expenses} />
     </div>
   )
